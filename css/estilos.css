@@ -1,0 +1,343 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;      /*para navegar dentro de la pagina web, baja lento*/
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2.em;}
+p{ font-size: 1.25em;}
+ul{ list-style: none;}
+li{ font-size: 1.25em;}
+
+button{
+    font-size: 1.5em;
+    font-weight: bold;       /*negrita*/
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: blueviolet;
+}
+
+button:hover{
+    background-color: rgb(88, 28, 145);
+    cursor: pointer;
+}
+
+.color_acento{
+    color: blueviolet;
+}
+
+.container{             /*responci*/
+    max-width: 1400px;
+    margin: auto;
+}
+
+header{
+    background-color: rgb(246, 168, 168);
+}
+
+header .logo{
+    margin: 0;
+    padding: 20px;
+    font-weight: bold;
+    color: blueviolet;
+    font-size: 2.5em;
+}
+
+header .container{      /*displeys*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    text-decoration: none;
+    padding: 5px 12px;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: blueviolet;
+}
+
+#banner{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/img/programacion.jpg");
+    background-repeat: no-repeat;      /*no repita la imagen*/
+    background-size: cover;            /*ocupa todo el espacio de banner*/
+    background-position: center center;
+}
+
+#banner h1{
+    color: rgba(240,240,240);
+}
+
+#banner button{
+    font-size: 1.75em;
+}
+
+#somos-proya .container{
+    text-align: center;
+    padding: 200px 12px;
+    
+}
+
+#nuestros_programas{
+    background: rgb(88, 86, 86);
+    color: white;
+    text-align: center;
+}
+
+#nuestros_programas .container{
+    padding: 10px 12px;
+}
+
+#nuestros_programas h2{
+    margin: 0;
+    font-size: 3.2em;
+    padding: 0;
+}
+
+#nuestros_programas .programas{
+    margin: 0;
+    padding: 0;
+}
+
+#nuestros_programas p{
+    display: none;
+}
+
+#nuestros_programas h3{
+    font-weight: bold;
+}
+
+#nuestros_programas .carta{
+    background-repeat: no-repeat;      
+    background-size: cover;
+    background-position: center center;
+    padding: 20px;
+    margin: 10px 30px;
+    border-radius: 20px;
+    border: 5px solid rgb(121, 230, 136);
+}
+
+.carta:first-child{       /*para seleccionar la primera carta del div y darle estilos unicos*/
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/img/programacion.jpg");
+}
+
+.carta:nth-child(2){   /*para seleccionar la segunda carta del div y darle estilos unicos*/
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/img/programacion_2.jpeg");
+}
+
+.carta:nth-child(3){   /*para seleccionar la tercera carta del div y darle estilos unicos*/
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/img/programacion_3.jpeg");
+}
+
+#caracteristicas .container{
+    text-align: center;
+    padding: 250px 12px;
+}
+
+#caracteristicas .container ul{
+    margin:16px 0px;
+    font-weight: bold;
+}
+
+#final{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #333;
+    color: aliceblue;
+    height: 100vh;
+}
+
+#final h2{
+    margin-bottom: 120px;
+    font-size:  9vw;  /*se acopla a la pantalla*/
+}
+
+#final button{
+    font-size: 5vw;
+}
+
+footer{
+    background: rgb(158, 94, 94);
+}
+
+footer p{
+    margin: 0;
+    padding: 15px;
+    color: white;
+}
+
+footer .container{  /*poner el footer al final y en el centro*/
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 720px){
+    /*estilos header para pantalla con minimo de 720px*/
+   
+    header{     /*header estatico al momento de hacer scroll*/
+        position: fixed;
+        width: 100%;
+        height: 10vh;
+    }
+
+    header .container{
+        flex-direction: row;    
+        justify-content: space-between;
+        height: 100%
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #banner h1{
+       font-size: 5em;
+    }
+
+
+    /*estilos seccion somos-proya*/
+
+    #somos-proya .container{
+        display: flex;
+        justify-content: space-evenly; /*espacios iguales en los costados*/
+        padding: 90px 12px;
+}
+    }
+
+    #somos-proya .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #somos-proya h2{
+        margin-top: 0px;
+    }
+
+    #somos-proya .img-container{
+        background-image: url(/img/prom_2.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+        width: 400px;
+    }
+    
+    /*estilos seccion nuestros programas*/
+
+    #nuestros_programas .programas{
+        display: flex;
+        justify-content: center;
+        height: 70vh;
+    }
+
+    #nuestros_programas p{
+        display: block;
+        margin-bottom: 90px;
+
+    }
+
+    #nuestros_programas h3{
+        margin-top: 0;
+    }
+
+    #nuestros_programas h2{
+        margin: 50px;
+    }
+
+    #nuestros_programas .carta{
+        padding: 15px;
+    }
+
+    #caracteristicas{  /*posicionar texto primero y despues la img en linea*/
+        background-image: url(/img/prom_1.png);
+        background-repeat: no-repeat;
+        background-size: 500px 400px;
+        background-position: calc(100vw - 500px) 120px;
+    }
+
+    #caracteristicas .container{
+        text-align: initial;
+    }
+
+    #caracteristicas ul{
+        margin-left: 100px;
+    }
+
+    #final h2{
+        font-size: 5em;
+    }
+
+    #final button{
+        font-size: 2em;
+    }
+
+    footer .container{
+        justify-content: flex-end;
+    }
+
+@media(min-width: 1200px){
+    #caracteristicas{
+        background-position-x: calc(100vw - 800px) ;
+    }
+
+
+}
